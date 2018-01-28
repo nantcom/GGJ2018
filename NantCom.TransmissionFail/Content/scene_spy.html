@@ -1,0 +1,13 @@
+﻿<div ng-controller="SpyScene as scene"
+     class="spy">
+    <div>
+        You are the Spy: Try to communicate this kill target as accurate as possible.
+       <img src="{{globalState.parameter.ReferencePicture.Url}}" />
+
+    </div>
+
+    <div
+         ng-include="'/Content/template_drawingpanel.html'">
+        
+    </div>
+</div>

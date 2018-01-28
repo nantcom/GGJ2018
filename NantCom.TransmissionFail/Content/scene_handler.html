@@ -1,0 +1,18 @@
+﻿<div ng-controller="HandlerScene as scene"
+     class="handler">
+    <div ng-include="'/Content/template_viewerpanel.html'">
+    </div>
+
+    <div>        
+        <p>
+            You are the Handler. View the Drawing that Spy send you and guess
+            which target to kill - you have 10 seconds.
+        </p>
+        <div class="targets">
+            <div ng-repeat="image in globalState.parameter.ChoicePictures"
+                 ng-style="{ 'background-image' : 'url(' + image.Url + ')'}"
+                 ng-click="scene.vote($index)">
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,36 @@
+﻿<div ng-controller="SelectGameScene as scene">
+    <div>
+        <div class="container">
+            <h1 class="jumbotron">
+                Transmission<b style="color:red">Fail</b>
+            </h1>
+            <h2>
+                You are the spy, you have your mission, but your 3G ran out and you can't send 
+                the target photo via Email. Your Only option...is to draw it!<br/>
+            </h2>
+        </div>
+    </div>
+
+    <div>
+        <div class="container">
+            <form>
+                <div class="input-group mb-3">
+                    <input type="text" class="form-control" placeholder="Mission Name"
+                           ng-model="newGameName">
+                    <div class="input-group-append">
+                        <button class="btn btn-primary" type="button"
+                                ng-click="scene.newGame(newGameName)">Accept new Mission</button>
+                    </div>
+                </div>
+
+                <select class="custom-select custom-select-lg mb-3"
+                        ng-model="gameToJoin" ng-change="scene.joinGame(gameToJoin)">
+                    <option ng-repeat="game in gamelist">{{game.GameId}}</option>
+                </select>
+
+            </form>
+        </div>
+
+    </div>
+
+</div>

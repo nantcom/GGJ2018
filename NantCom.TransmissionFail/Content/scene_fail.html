@@ -1,0 +1,23 @@
+﻿<div ng-controller="FailScene as scene"
+     class="pass">
+    <div>
+        <div class="jumbotron">
+            
+            <h1 ng-if="globalState.result.TimeOut">
+                Too Slow!
+            </h1>
+
+            <h1 ng-if="globalState.result.Result == false"
+                class="danger text-danger">
+                You Killed an innocent
+                {{globalState.result.Keyword}}
+            </h1>
+
+        </div>
+    </div>
+
+    <div>   
+        <p>This is the real target</p>
+        <img src="{{globalState.result.CorrectUrl}}" />
+    </div>
+</div>
